@@ -17,7 +17,6 @@ RUN apt-get update \
     libxml2-dev \
     libbz2-dev \
     libjpeg62-turbo-dev \
-    php-pear \
     curl \
     git \
     subversion \
