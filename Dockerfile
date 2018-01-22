@@ -1,15 +1,16 @@
-FROM php:7.1.9-fpm
+FROM php:7.2.0-fpm
 
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     curl \
+    iputils-ping \
     libicu-dev \
     libmemcached-dev \
     libz-dev \
     libpq-dev \
     libjpeg-dev \
-    libpng12-dev \
+    libpng-dev \
     libfreetype6-dev \
     libssl-dev \
     libmcrypt-dev \
@@ -34,7 +35,6 @@ RUN docker-php-ext-configure bcmath --enable-bcmath \
         bcmath \
         intl \
         mbstring \
-        mcrypt \
         mysqli \
         pcntl \
         pdo_mysql \
